@@ -1,18 +1,49 @@
-# Pathfinder2eTracker
-Pathfinder 2e Initiative Tracker
+# Pathfinder 2E Initiative Tracker (HTML5)
 
-This runs 100% on your local PC (May run on other devices, but I have not tested). Download all files to a directory then double-click on "Index.html"
+A lightweight, browser-based **initiative tracker** built with HTML5, CSS, and JavaScript for use with **Pathfinder Second Edition**.
 
-When you place a check mark in the "Turn" part of the row it turns the row grey and the row below it turns green to show you which character has complete their turn and which character is next.
+Easily manage combat initiative, conditions, HP, and turn order for players, monsters, and NPCs — all with persistent storage that saves automatically.
 
-Clicking the "Next Round" button will clear all the checkmarks in "Turn" and increase the "Round:" counter to +1.
+---
 
-Entering the initiative and dex mod of each character, then clicking the "Sort by Init & Dex" button sorts each of the character by Initiative first then dexterity.
+## 🔧 Features
 
-Clicking the "New Encounter" button clears all information except for the name, type, and dex mod. Also resets the round counter back to 1.
+- ✔️ **30 editable rows** for combatants
+- ✔️ Customizable fields: Name, Type, Initiative, Dex Mod, HP, Conditions, Notes
+- ✔️ **Turn tracking** with row highlighting
+- ✔️ Conditions dropdown loaded from an external `conditions.csv` file
+- ✔️ Sort by Initiative and Dex Modifier (for tiebreakers)
+- ✔️ **"Next Round"** advances round number and resets checkboxes
+- ✔️ **"New Encounter"** keeps character info but resets initiative, HP damage, etc.
+- ✔️ **"Reset Tracker"** clears all data (with confirmation prompt)
+- ✔️ Fully **offline-capable** – runs entirely in your browser
+- ✔️ Data saved automatically via `localStorage`
+- ✔️ Clean UI with color-coded highlights for Dead, Current Turn, and Next
 
-Clicking "Reset Tracker" gives you a warning that all data is wiped as if you start new.
+---
 
-If a character has a condition of "dead" the row is highlighted red and will be skipped on each new round. So, if the dead character comes up for their turn, the green row will skip the dead character and move to the next character that is not dead.
+## 📦 How to Use
 
-All information is saved if the browser closes. This is wiped if you clear all browser cache.
+1. **Download or Clone** this repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/pf2e-initiative-tracker.git
+   
+2. Open index.html in any modern web browser (Chrome, Firefox, Edge, etc.)
+
+3. Start Tracking!
+
+   - Click any field to edit.
+   - Use the checkboxes to mark whose turn it is
+   - Use the buttons to progress rounds, sort, or reset
+   
+==============================================================
+
+Legal Disclaimer
+
+This project is provided as-is, without warranty of any kind.
+
+⚠️ I am not responsible for any data loss, unexpected behavior, browser incompatibility, or issues that may arise from the use or misuse of this code.
+
+⚠️ This project is for personal, educational, or gaming use only.
+
+⚠️ Pathfinder® and related content are trademarks of Paizo Inc., and this project is not affiliated with or endorsed by them.
