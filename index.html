@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pathfinder 2E Initiative Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pathfinder 2E Initiative Tracker</h1>
+    
+    <div class="controls">
+        <div class="controls-left">
+            <button onclick="nextRound()">Next Round</button>
+            <button onclick="sortByInitAndDex()">Sort by Init & Dex</button>
+        </div>
+        <div class="controls-right">
+            <button onclick="newEncounter()">New Encounter</button>
+            <button onclick="resetTracker()">Reset Tracker</button>
+        </div>
+    </div>
+
+    <!-- Centered and styled Round display -->
+    <div class="round-display">
+        <label>Round:</label>
+        <span id="round">1</span>
+    </div>
+
+    <table id="tracker">
+        <thead>
+            <tr>
+                <th>Turn</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Initiative</th>
+                <th>Dex Mod</th>
+                <th>HP Damage Taken</th>
+                <th>Conditions</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody id="tracker-body">
+            <!-- Rows will be inserted here dynamically -->
+        </tbody>
+    </table>
+
+    <!-- Template for each tracker row -->
+    <template id="row-template">
+        <tr>
+            <td><input type="checkbox" class="turn"></td>
+            <td><input type="text" class="name"></td>
+            <td>
+                <select class="type">
+                    <option>PC</option>
+                    <option>NPC</option>
+                    <option>Monster</option>
+                </select>
+            </td>
+            <td><input type="number" class="init"></td>
+            <td><input type="text" class="dexmod"></td>
+            <td><input type="number" class="hp"></td>
+            <td>
+                <select class="conditions">
+                    <!-- Will be populated dynamically from conditions.csv -->
+                </select>
+            </td>
+            <td><input type="text" class="notes"></td>
+        </tr>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
